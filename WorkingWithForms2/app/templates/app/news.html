@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>News</title>
+    <link rel="stylesheet" href="{% static 'App/css/style.css' %}">
+</head>
+<body>
+    <form action="" method="post" >
+        {% csrf_token %}
+        <p><label for="{{ formNews.title.id_for_label }}">Название</label>{{ formNews.title }}</p>
+        <p style="width: 200px;"><label for="{{ formNews.content.id_for_label }}">Текст</label>{{ formNews.content }}</p>
+        <p><label for="{{ formNews.is_published.id_for_label }}">Опубликовано</label>{{ formNews.is_published }}</p>
+        <p><label for="{{ formNews.category.id_for_label }}">Категория</label>{{ formNews.category }}</p>
+
+<!--        {{ formNews.as_ul }}-->
+        <button>Send</button>
+    </form>
+<img src="{% static 'App/img/1.png' %}">
+</body>
+</html>
+
+news = [
+    {'id':1, 'title': 'hgfddf', 'content': 'fgchvfjbgnhmoi', 'picture': 'App/img/1.png'}
+]

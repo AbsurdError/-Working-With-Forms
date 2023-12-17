@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+ {% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1,0">-->
+    <title>Форма</title>
+     <link rel="stylesheet" href="{% static 'App/css/style.css' %}">
+<!--    <link rel="stylesheet" href="../../static/App/css/style.css">-->
+</head>
+<body>
+    <section class="main">
+        <div class="container">
+            <div class="main__wrapper">
+                <div class="main__block">
+                    <h2 class="main__title">Make an appointment</h2>
+                    <form action="appointment" class="main__form" method="POST">
+                        {% csrf_token %}
+                        <div class="main__row">
+                            <input type="text" class="main__input" placeholder="Name" name="name" >
+                            <input type="text" class="main__input" placeholder="Email" name="email">
+                        </div>
+                        <div class="main__row">
+                            <input type="text" class="main__input" placeholder="Phone Number" name="phone">
+                            <input type="text" class="main__input" placeholder="Select Service" name="service">
+                        </div>
+                        <textarea class="main__textarea" rows="5" name="car_info">Tell us about the car needing service(s)</textarea>
+
+                        <input class="main__btn" type="submit" value="Make an Appointment">
+                    </form>
+                </div>
+                <div class="main__texts">
+                    <h1 class="main__main-title">Maxime placeat facere<br> possimus omnis </h1>
+                    <p class="main__digits">17k</p>
+                    <p class="main__text">customers served (and counting)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order</title>
+</head>
+<body>
+    <h1>Проверка заказа</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ orders.as_ul }}
+        <br>
+        <button>Подтвердить</button>
+    </form>
+</body>
+</html>
